@@ -1,10 +1,15 @@
-import lamdas.LambdaMiddleware;
-import lamdas.Printable;
+import lamdas.LambdaExecutor;
+import stream_api.StreamApiExecutor;
 
 public class MainClass {
 
-	public static void main(String[] args) {
-		Printable printable = fileName -> "Printing file named: " + fileName;
-		LambdaMiddleware.printThing(printable);
-	}
+    public static void main(String[] args) {
+
+        // -----> LAMBDA EXPRESSIONS <-----
+        LambdaExecutor.execute();
+
+        // -----> JAVA STREAM API <-----
+        StreamApiExecutor.execute();
+
+    }
 }
