@@ -1,4 +1,5 @@
 import lamdas.LambdaExecutor;
+import optionals.OptionalExecutor;
 import stream_api.StreamApiExecutor;
 
 public class MainClass {
@@ -11,5 +12,7 @@ public class MainClass {
         // -----> JAVA STREAM API <-----
         StreamApiExecutor.execute();
 
+        // -----> JAVA OPTIONALS <-----
+        OptionalExecutor.execute();
     }
 }

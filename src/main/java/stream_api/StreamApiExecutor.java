@@ -33,7 +33,6 @@ public class StreamApiExecutor {
         sortedMalesByAge.forEach(System.out::println);
         System.out.println("\n");
 
-
         //grouping
         Map<Gender, List<Person>> peopleGroupedByGender =
                 people.stream().collect(Collectors.groupingBy(Person::getGender));
@@ -50,7 +49,7 @@ public class StreamApiExecutor {
         oldestMale.ifPresent(System.out::println);
     }
 
-     static List<Person> getPeople() {
+    public static List<Person> getPeople() {
         return List.of(
                 new Person("Joey Tribiani", 30, Gender.MALE),
                 new Person("Ross Geller", 29, Gender.MALE),
