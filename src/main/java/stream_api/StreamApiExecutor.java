@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class StreamApiExecutor {
 
-    public static void execute() {
+    public void execute() {
         List<Person> people = getPeople();
         people.forEach(System.out::println);
         System.out.println("\n");

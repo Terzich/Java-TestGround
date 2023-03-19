@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class OptionalExecutor {
 
-    public static void execute() {
+    public  void execute() {
         Optional<Cat> catOptional = findCatByName("Charlie");
         System.out.println(catOptional.map(Cat::getAge).orElse(0));
         getOptPeople().ifPresent(people -> {
@@ -20,15 +20,12 @@ public class OptionalExecutor {
             collect.forEach(System.out::println);
         });
     }
-    public void test () {
-
-    }
-    private  static Optional<Cat> findCatByName(String name) {
+    private Optional<Cat> findCatByName(String name) {
         Cat cat = new Cat(name, 4);
         return Optional.ofNullable(cat);
     }
 
-    private static Optional<List<Person>> getOptPeople() {
+    private Optional<List<Person>> getOptPeople() {
         List<Person> people = StreamApiExecutor.getPeople();
         return Optional.of(people);
     }

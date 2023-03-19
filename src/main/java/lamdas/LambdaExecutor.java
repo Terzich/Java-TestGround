@@ -2,7 +2,7 @@ package lamdas;
 
 public class LambdaExecutor {
 
-    public static void execute() {
+    public void execute() {
         Printable printable = fileName -> "Printing file named: " + fileName;
         printThing(printable);
         GenericFunctionalInterface<String> reverseString =
@@ -19,7 +19,7 @@ public class LambdaExecutor {
         System.out.println(squareNumber.process(5));
     }
 
-    static void printThing(Printable printable) {
+    void printThing(Printable printable) {
         System.out.println(printable.print("Geography"));
     }
 }
